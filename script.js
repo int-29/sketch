@@ -27,6 +27,12 @@ function createGrid(row, column) {
 button.addEventListener('click', () => {
     let desiredRow = prompt('How many rows do you want to set?');
     let desiredColumn = prompt('How many columns do you want to set?');
+    while (desiredRow > 100) {
+        desiredRow = prompt('How many rows do you want to set? (<100)');
+    }
+    while (desiredColumn > 100) {
+        desiredColumn = prompt('How many columns do you want to set? (<100)');
+    }
     container.innerHTML = '';
     createGrid(desiredRow, desiredColumn);
 })
