@@ -1,10 +1,19 @@
 const container = document.querySelector('#container');
 container.setAttribute('class', 'grid');
 
+const navbar = document.createElement('div')
+document.body.appendChild(navbar)
+navbar.setAttribute('class', 'navbar')
+
 const button = document.createElement('button');
 button.textContent = 'Change Grid Dimensions';
-button.setAttribute('class', 'button')
-document.body.appendChild(button)
+button.setAttribute('class', 'button');
+navbar.appendChild(button);
+
+const reset = document.createElement('button')
+reset.textContent = 'Reset'
+reset.setAttribute('class', 'button')
+navbar.appendChild(reset)
 
 function createGrid(row, column) {
     for (let i = 1; i <= row; i++) {
@@ -18,8 +27,15 @@ function createGrid(row, column) {
             cell.style.width = String(850 / column) + "px";
             rows.appendChild(cell);
             cell.addEventListener('mouseover', () => {
-            cell.setAttribute('class', 'gridElementChanged');
+                let randomColor1 = Math.random() * 256;
+                let randomColor2 = Math.random() * 256;
+                let randomColor3 = Math.random() * 256;
+                cell.style.backgroundColor = 'rgb(' + randomColor1 + ', ' + randomColor2 + ', ' + randomColor3 + ')';
             })
+            reset.addEventListener('click', () => {
+                cell.style.backgroundColor = 'rgb(255, 255, 255)';
+            })
+            
         }
     }
 }
