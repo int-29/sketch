@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(180, 180, 180);
 }
 
 .button {
