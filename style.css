@@ -9,6 +9,7 @@
     width: 850px;
     border: 1px solid black;  
     order: 1; 
+    background-color: white;
 }
 
 .gridElement{
@@ -21,11 +22,17 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    background-color: rgb(170, 170, 170);
 }
 
 .button {
     width: 200px;
     height: 50px;  
+    background-color: lightcoral;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .boxRow {

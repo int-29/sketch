@@ -1,19 +1,19 @@
 const container = document.querySelector('#container');
 container.setAttribute('class', 'grid');
 
-const navbar = document.createElement('div')
-document.body.appendChild(navbar)
-navbar.setAttribute('class', 'navbar')
+const navbar = document.createElement('div');
+document.body.appendChild(navbar);
+navbar.setAttribute('class', 'navbar');
 
 const button = document.createElement('button');
 button.textContent = 'Change Grid Dimensions';
 button.setAttribute('class', 'button');
 navbar.appendChild(button);
 
-const reset = document.createElement('button')
-reset.textContent = 'Reset'
-reset.setAttribute('class', 'button')
-navbar.appendChild(reset)
+const reset = document.createElement('button');
+reset.textContent = 'Reset';
+reset.setAttribute('class', 'button');
+navbar.appendChild(reset);
 
 function createGrid(row, column) {
     for (let i = 1; i <= row; i++) {
